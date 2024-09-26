@@ -1,0 +1,317 @@
+@font-face {
+  font-family: nice;
+  src: url(../fonts/nice.woff);
+}
+@font-face {
+  font-family: simple;
+  src: url(../fonts/simple.woff);
+}
+body {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav input {
+  display: none;
+}
+nav input:checked ~ .navbar-nav .navbar-nav-left {
+  width: 50%;
+}
+nav input:checked ~ .navbar-nav .navbar-nav-right {
+  width: 50%;
+}
+nav input:checked ~ .hamburger-menu .hamburger-menu-lines .line1 {
+  transform: rotate(45deg);
+}
+nav input:checked ~ .hamburger-menu .hamburger-menu-lines .line2 {
+  display: none;
+}
+nav input:checked ~ .hamburger-menu .hamburger-menu-lines .line3 {
+  transform: rotate(-45deg);
+}
+nav .hamburger-menu {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  width: 50px;
+  height: 30px;
+  z-index: 300;
+}
+nav .hamburger-menu .hamburger-menu-lines {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+nav .hamburger-menu .hamburger-menu-lines .line {
+  width: 50px;
+  height: 4px;
+  border: 3px solid white;
+  background-color: white;
+  margin-bottom: 10px;
+}
+nav .navbar-nav .navbar-nav-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(22, 8, 8);
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 1s;
+  overflow: hidden;
+}
+nav .navbar-nav .navbar-nav-left .food-album {
+  width: 250px;
+  height: 100px;
+  position: relative;
+}
+nav .navbar-nav .navbar-nav-left .food-album .img1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 40px rgb(198, 193, 193);
+}
+nav .navbar-nav .navbar-nav-left .food-album .img2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  box-shadow: 0 0 40px rgb(198, 193, 193);
+}
+nav .navbar-nav .navbar-nav-left .food-album .img3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  box-shadow: 0 0 40px rgb(198, 193, 193);
+}
+nav .navbar-nav .navbar-nav-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(63, 59, 59);
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 1s;
+  overflow: hidden;
+}
+nav .navbar-nav .navbar-nav-right ul {
+  list-style-type: none;
+}
+nav .navbar-nav .navbar-nav-right ul a {
+  text-decoration: none;
+  color: white;
+  width: 150px;
+  display: inline-block;
+  text-align: center;
+  transition: letter-spacing 0.05;
+  font-size: 25px;
+  padding: 10px 0;
+}
+nav .navbar-nav .navbar-nav-right ul a:hover {
+  letter-spacing: 4px;
+}
+
+header {
+  background: black url(../images/bg.jpeg) no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+header .banner {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+header .banner .banner-img {
+  margin-right: 10px;
+  border: 3px solid yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  padding: 20px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+header .banner .banner-img .fa {
+  color: yellow;
+  font-size: 30px;
+}
+header .banner .main-header {
+  font-size: 20px;
+  font-family: nice;
+  text-align: center;
+  color: white;
+}
+header .banner .sub-header {
+  text-align: center;
+  font-size: 20px;
+  font-family: simple;
+  color: white;
+}
+header .welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+header .welcome .main-welcome {
+  font-size: 20px;
+  font-family: nice;
+  text-align: center;
+  color: white;
+}
+header .welcome .sub-welcome {
+  text-align: center;
+  font-size: 20px;
+  font-family: simple;
+  color: white;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 60%;
+  background-color: rgb(45, 35, 35);
+}
+.description .description-text {
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  width: 50%;
+}
+.description .description-img {
+  width: 50%;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.foods {
+  width: 100%;
+  height: 600px;
+}
+.foods .foods-row-one {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+}
+.foods .foods-row-one .gallery {
+  width: 33.3%;
+  height: 100%;
+  position: relative;
+}
+.foods .foods-row-one .gallery .gallery-img {
+  width: 100%;
+  height: 100%;
+}
+.foods .foods-row-one .gallery .gallery-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(208, 208, 78);
+  opacity: 0.6;
+}
+.foods .foods-row-one .gallery .gallery-overlay .food-btn {
+  width: 100px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 30px;
+}
+.foods .foods-row-one .gallery .gallery-overlay:hover {
+  opacity: 1;
+}
+
+footer {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+footer .footer-upper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+footer .footer-upper .banner-img {
+  margin-right: 10px;
+  border: 3px solid yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  padding: 20px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+footer .footer-upper .banner-img .fa {
+  color: yellow;
+  font-size: 30px;
+}
+footer .footer-upper .main-header {
+  font-size: 20px;
+  font-family: nice;
+  text-align: center;
+  color: white;
+}
+footer .footer-upper .sub-header {
+  text-align: center;
+  font-size: 20px;
+  font-family: simple;
+  color: white;
+}
+footer .footer-middle {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+}
+footer .footer-middle .icon {
+  font-size: 25px;
+  color: white;
+  margin-right: 10px;
+}
+footer .footer-lower {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-lower p {
+  color: white;
+  font-size: 25px;
+}/*# sourceMappingURL=style.css.map */

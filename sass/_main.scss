@@ -1,0 +1,16 @@
+
+@font-face{
+    font-family:nice;
+    src:url(../fonts/nice.woff)
+}
+@font-face{
+    font-family:simple;
+    src:url(../fonts/simple.woff)
+}
+$primary-color:mix(rgb(107, 107, 22),rgb(230, 230, 127));
+@mixin centringStyles($x){
+    position:absolute;
+    top:$x;
+    left:50%;
+    transform:translate(-50%,-50%)
+}
